@@ -5,11 +5,11 @@ export const BtnElement = styled.button`
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  padding: 12px 16px;
-  font-size: 24px;
+  padding: 10px;
+  font-size: 16px;
   font-weight: bold;
   border: none;
-  background-color: #cab1c79d;
+  background-color: #9fbfac;
   transform: scale(1);
   cursor: pointer;
 
@@ -18,9 +18,8 @@ export const BtnElement = styled.button`
     transform: scale(1.1);
     background-color: ${props =>
       props.status === 'add'
-        ? 'rgba(0, 128, 75, 0.7)'
-        : 'rgba(202, 30, 30, 0.6)'};
-    box-shadow: 0px 3px 3px 3px #cab1b98c;
+        ? '#1FA847'
+        : '#FF5A5A '};
   }
   &:active {
     transform: scale(1.2);

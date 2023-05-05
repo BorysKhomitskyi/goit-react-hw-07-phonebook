@@ -3,11 +3,11 @@ import { MdPersonRemoveAlt1 } from 'react-icons/md';
 import { ListItem, ListItemData } from './ContactItem.styled';
 import { Btn } from '../Btn/Btn';
 
-export const ContactItem = ({ id, name, number, onDeleteBtnClick }) => {
+export const ContactItem = ({ id, name, phone, onDeleteBtnClick }) => {
   return (
     <ListItem>
       <ListItemData>
-        {name}: {number}
+        {name}: {phone}
       </ListItemData>
       <Btn
         icon={MdPersonRemoveAlt1}
@@ -23,6 +23,6 @@ export const ContactItem = ({ id, name, number, onDeleteBtnClick }) => {
 ContactItem.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  number: PropTypes.string.isRequired,
+  phone: PropTypes.string.isRequired,
   onDeleteBtnClick: PropTypes.func.isRequired,
 };

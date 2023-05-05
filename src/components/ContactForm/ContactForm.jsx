@@ -12,7 +12,7 @@ export const ContactForm = () => {
   const dispatch = useDispatch();
 
   const [name, setName] = useState('');
-  const [number, setNumber] = useState('');
+  const [phone, setPhone] = useState('');
   const contacts = useSelector(state => state.contacts.items);
 
   const onInputChange = event => {
@@ -20,8 +20,8 @@ export const ContactForm = () => {
       case 'name':
         setName(event.target.value);
         break;
-      case 'number':
-        setNumber(event.target.value);
+      case 'phone':
+        setPhone(event.target.value);
         break;
       default:
         return;
@@ -42,19 +42,19 @@ export const ContactForm = () => {
       );
     }
 
-    dispatch(addContact({ name, number }));
+    dispatch(addContact({ name, phone }));
     resetForm();
   };
 
   const resetForm = () => {
     setName('');
-    setNumber('');
+    setPhone('');
   };
 
   return (
     <Form onSubmit={handleSubmit}>
       <Label>
-        Name
+        Fullname
         <InputItem
           onChange={onInputChange}
           value={name}
@@ -65,12 +65,12 @@ export const ContactForm = () => {
         />
       </Label>
       <Label>
-        Number
+        Phonenumber
         <InputItem
           onChange={onInputChange}
-          value={number}
+          value={phone}
           type="tel"
-          name="number"
+          name="phone"
           placeholder="Enter contact`s number"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"

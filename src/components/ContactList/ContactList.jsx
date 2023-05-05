@@ -42,7 +42,7 @@ export const ContactList = () => {
             id={contact.id}
             key={contact.id}
             name={contact.name}
-            number={contact.number}
+            phone={contact.phone}
             onDeleteBtnClick={() => dispatch(deleteContact(contact.id))}
           />
         );
