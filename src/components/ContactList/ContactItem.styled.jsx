@@ -14,5 +14,5 @@ export const ListItem = styled.li`
 
 export const ListItemData = styled.p`
   font-size: 20px;
-  margin-right: 36px;
+  margin: 0px 36px 0px 0px;
 `;

@@ -5,13 +5,12 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
   color: #010101;
   padding: 40px;
 `;
 
 export const MainHeader = styled.h1`
-  font-size: 42px;
+  font-size: 36px;
   color: #010101;
   text-transform: uppercase;
 `;
